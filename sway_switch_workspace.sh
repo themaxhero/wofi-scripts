@@ -10,10 +10,10 @@ function gen_workspaces()
 
 _WORKSPACE=$( (echo empty; gen_workspaces)  | $_PROGRAM -dmenu -p "Select workspace:")
 
-if [ x"empty" = x"${WORKSPACE}" ]
+if [ x"empty" = x"${_WORKSPACE}" ]
 then
     i3_empty_workspace.sh
-elif [ -n "${WORKSPACE}" ]
+elif [ -n "${_WORKSPACE}" ]
 then
     $_MSG_BIN workspace "${_WORKSPACE}"
 fi
